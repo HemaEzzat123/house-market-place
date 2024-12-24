@@ -51,10 +51,13 @@ function Listing() {
           <SwiperSlide key={index}>
             <div
               style={{
-                width: "100%",
-                height: "400px",
                 display: "flex",
                 justifyContent: "center",
+                alignItems: "center",
+                height: "400px",
+                width: "100%",
+                background: "#f2f2f2",
+                borderRadius: "10px",
                 overflow: "hidden",
               }}
             >
@@ -62,10 +65,8 @@ function Listing() {
                 src={url}
                 alt={`Listing image ${index + 1}`}
                 style={{
-                  width: "100%",
-                  height: "400px",
-                  objectFit: "center",
-                  maxWidth: "100%",
+                  objectFit: "cover",
+                  width: "400px",
                 }}
               />
             </div>

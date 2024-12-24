@@ -47,12 +47,16 @@ function Slider() {
         <Swiper
           slidesPerView={2}
           pagination={{ clickable: true }}
+          navigation
           modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={20}
+          style={{ padding: "20px 0" }}
         >
           {listings.map(({ data, id, index }) => (
             <SwiperSlide
               key={id}
               onClick={() => navigate(`/category/${data.type}/${id}`)}
+              style={{ cursor: "pointer" }}
             >
               <div
                 style={{
@@ -62,22 +66,40 @@ function Slider() {
                   justifyContent: "center",
                   alignItems: "center",
                   overflow: "hidden",
+                  borderRadius: "8px",
+                  backgroundColor: "#f5f5f5",
                 }}
               >
                 <img
                   src={data.imgUrls[0]}
                   alt={`Listing image ${index + 1}`}
                   style={{
-                    width: "100%",
-                    height: "300px",
-                    objectFit: "center",
-                    maxWidth: "100%",
+                    width: "300px",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
                   }}
                 />
               </div>
-              <p className="swiperSlideText">{data.name}</p>
-              <p className="swiperSlidePrice">
-                ${data.discountedPrice ?? data.regularPrice}{" "}
+              <p
+                className="swiperSlideText"
+                style={{
+                  marginTop: "10px",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }}
+              >
+                {data.name}
+              </p>
+              <p
+                className="swiperSlidePrice"
+                style={{
+                  fontSize: "15px",
+                  color: "#2d3436",
+                  marginTop: "5px",
+                }}
+              >
+                ${data.discountedPrice ?? data.regularPrice}
                 {data.type === "rent" && "/ month"}
               </p>
             </SwiperSlide>
