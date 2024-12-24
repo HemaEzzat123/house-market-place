@@ -85,9 +85,9 @@ function CreateListing() {
     let location;
     if (geolocationEnabled) {
       const apiKey = import.meta.env.VITE_GEOCODE_API_KEY;
-      
+
       const response = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyCj6UmuMpX8SX74L6jx67VbisovSFH7GQY`
       );
 
       const data = await response.json();
