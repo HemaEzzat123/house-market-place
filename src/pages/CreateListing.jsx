@@ -85,9 +85,9 @@ function CreateListing() {
     let location;
     if (geolocationEnabled) {
       const apiKey = import.meta.env.VITE_GEOCODE_API_KEY;
-      const encodedAddress = encodeURIComponent(address);
+      
       const response = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${apiKey}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`
       );
 
       const data = await response.json();
@@ -99,7 +99,6 @@ function CreateListing() {
         data.status === "ZERO_RESULTS"
           ? undefined
           : data.results[0]?.formatted_address;
-
       if (data.status === "ZERO_RESULTS") {
         setLoading(false);
         toast.error(
