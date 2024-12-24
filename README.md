@@ -1,4 +1,4 @@
-# Project Title
+# House Market Place
 
 A responsive and feature-rich web application built with Vite, React, and Tailwind CSS, leveraging Firebase for backend services, and enhanced with SweetAlert2 (Swal), React Toast, and React Leaflet for additional functionality.
 
@@ -67,11 +67,6 @@ Check out the live demo: [Live Demo Link](#) (Replace with your live demo URL)
    - Add your Firebase configuration in a `.env` file:
      ```env
      VITE_FIREBASE_API_KEY=your-api-key
-     VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
-     VITE_FIREBASE_PROJECT_ID=your-project-id
-     VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-     VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-     VITE_FIREBASE_APP_ID=your-app-id
      ```
 
 4. **Start the development server:**
@@ -123,12 +118,3 @@ project-folder/
 ├── package.json           # Project dependencies and scripts
 └── README.md              # Project documentation
 ```
-
----
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-Feel free to contribute or use this project as a template for your own applications!
-
