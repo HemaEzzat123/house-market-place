@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
+const apiKey = import.meta.env.VITE_GEOCODE_API_KEY;
 const firebaseConfig = {
-  apiKey: "AIzaSyD0DpdYnb_nPc3jHG8lhA_Jbj_AVngNKEI",
+  apiKey: { apiKey },
   authDomain: "house-marketplacce-app-e3a26.firebaseapp.com",
   projectId: "house-marketplacce-app-e3a26",
   storageBucket: "house-marketplacce-app-e3a26.firebasestorage.app",
